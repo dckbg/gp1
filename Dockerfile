@@ -10,7 +10,7 @@ ENV CONFIG_URL=none
 
 ADD entrypoint.sh /entrypoint.sh
 
-RUN chmod +x /entrypoint.sh && chmod -R a+rwx /goproxy-vps
+RUN chmod +x /entrypoint.sh && echo null > /goproxy-vps/configurl && chmod -R a+rwx /goproxy-vps/configurl
 
 ENTRYPOINT  /entrypoint.sh 
 
